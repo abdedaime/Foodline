@@ -15,11 +15,11 @@ public interface IuserService {
 
 	public List<Snack> getAll();
 
-	User getUserByUsermail(String userName);
+	public User getUserByUsermail(String userName);
 
-	User getUserById(long id);
-    void deleteUser(long id);
-	public List<Client> getAllCustomers();
+	public User getUserById(long id);
+	public  void deleteUser(long id);
+	public  List<Client> getAllCustomers();
 
 
 }

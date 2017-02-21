@@ -1,0 +1,15 @@
+package net.te6.foodline.dao;
+
+import java.util.List;
+
+import net.te6.foodline.models.Food;
+
+public interface IfoodDao {
+	  public  void save(final Food o);
+	    public void delete(Food o);
+	    public Food get(final Long id);
+	    public  void saveOrUpdate(final  Food o);
+	    public  List<Food> getAll() ;
+	    public List<Food>  getFoodsBySnack(long idSnack);
+
+}

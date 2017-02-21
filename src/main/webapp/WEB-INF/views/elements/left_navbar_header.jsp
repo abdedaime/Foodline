@@ -20,19 +20,11 @@
         </li>
         
         <li class="nav-small-cap m-t-10">Menu</li>
-        <li> <a href="index.html" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard <span class="fa arrow"></span> <span class="label label-rouded label-custom pull-right">4</span></span></a>
-          <ul class="nav nav-second-level">
-                            <li> <a href="index.html">Minimalistic</a> </li>
-                            <li> <a href="index2.html">Demographical</a> </li>
-                            <li> <a href="index3.html">Analitical</a> </li>
-                            <li> <a href="index4.html">Simpler</a> </li>
-                        </ul>
-                    </li>
              <security:authorize access="hasAuthority('Role_admin')">   
-               <li><a href="villes" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Gestions des Villes</span></a></li>
-               <li><a href="quartiers" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Gestions des Quarties</span></a></li>
-               <li><a href=snacks class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Gestions des Snacks</span></a></li>
-               <li><a href="clients" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Gestions des Clients</span></a></li>
+               <li><a href="villes" class="waves-effect"><i class="icon-globe  fa-fw"></i> <span class="hide-menu">Gestions des Villes</span></a></li>
+               <li><a href="quartiers" class="waves-effect"><i class=" icon-location-pin  fa-fw"></i> <span class="hide-menu">Gestions des Quarties</span></a></li>
+               <li><a href=snacks class="waves-effect"><i class="icon-cup fa-fw"></i> <span class="hide-menu">Gestions des Snacks</span></a></li>
+               <li><a href="clients" class="waves-effect"><i class="icon-user fa-fw"></i> <span class="hide-menu">Gestions des Clients</span></a></li>
         
         </security:authorize>
         

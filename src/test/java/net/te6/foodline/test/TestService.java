@@ -29,7 +29,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
 //websystique.com/springmvc/spring-mvc-4-and-spring-security-4-integration-example/
-@ContextConfiguration(classes = { HibernateConfiguration.class,MailConfig.class })
+@ContextConfiguration(classes = { HibernateConfiguration.class,MailConfig.class})
 @RunWith(SpringJUnit4ClassRunner.class)
 public class TestService {
 	private static final String fooResourceUrl = "http://localhost:8081/FoodLineBackEnd/user";
@@ -106,7 +106,7 @@ public class TestService {
 		}
 
 	}
-	@Test
+	
 	public void testSnack() {
 
 		Admin admin = new Admin();
@@ -120,7 +120,7 @@ public class TestService {
 
 	}
 
-	@Test
+	
 	public void getSnack() {
 		List<Snack> snak = userService.getAll();
 		System.out.println(snak.size());
@@ -136,7 +136,7 @@ public class TestService {
 		client.setPassword("12346");
 		client.setFirstName("hicham");
 		client.setLastName("abdedaime");
-		client.setRole(new Role(RedirectClass.ROLE_SNACK));
+		client.setRole(new Role(RedirectClass.ROLE_CUSTOMER));
 
 		userService.save(client);
 

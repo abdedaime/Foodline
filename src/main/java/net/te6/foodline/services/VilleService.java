@@ -2,7 +2,7 @@ package net.te6.foodline.services;
 
 import java.util.List;
 
-import net.te6.foodline.dao.IGenericDao;
+import net.te6.foodline.dao.IVilleDao;
 import net.te6.foodline.models.Ville;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +11,10 @@ import org.springframework.stereotype.Service;
 
 public class VilleService implements
   IvilleService{
-	private IGenericDao<Ville> dao;
-
 	@Autowired
-	public void setDao(IGenericDao<Ville> daoToSet) {
-		dao = daoToSet;
-		dao.setClazz(Ville.class);
-	}
+	private IVilleDao dao;
+
+	
 
 	@Override
 	public void save(Ville o) {
@@ -33,7 +30,7 @@ public class VilleService implements
 	@Override
 	public Ville get(Long id) {
 		
-		return  dao.get(Ville.class, id);
+		return  dao.get(id);
 	}
 
 	@Override
@@ -45,7 +42,7 @@ public class VilleService implements
 	@Override
 	public List<Ville> getAll() {
 		
-		return dao.getAll(Ville.class);
+		return dao.getAll();
 	}
 
 }

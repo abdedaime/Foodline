@@ -23,8 +23,6 @@
 		<jackson.library>2.7.5</jackson.library>
 		<spring.security.v4>4.0.3.RELEASE</spring.security.v4>
 		<spring-social-version>1.1.4.RELEASE</spring-social-version>
-
-
 	</properties>
 
 
@@ -40,6 +38,13 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.v4}</version>
+		</dependency>
+		
+			<!-- sprin security taglibe -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
 			<version>${spring.security.v4}</version>
 		</dependency>
 

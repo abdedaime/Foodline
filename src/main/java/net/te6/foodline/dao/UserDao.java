@@ -1,5 +1,10 @@
 package net.te6.foodline.dao;
 
+import java.util.List;
+
+
+import net.te6.foodline.models.Client;
+import net.te6.foodline.models.Snack;
 import net.te6.foodline.models.User;
 
 import org.hibernate.Criteria;
@@ -9,6 +14,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+@SuppressWarnings("unchecked")
 @Transactional
 @Repository
 public class UserDao implements IuserDao {
@@ -40,6 +46,41 @@ public class UserDao implements IuserDao {
 		query.setParameter("id", id);
 		return (User) query.uniqueResult();
 
+	}
+
+	@Override
+	public void save(User user) {
+		// TODO Auto-generated method stub
+		 sessionFactory.getCurrentSession().save(user);
+	}
+
+	@Override
+	public void delete(User user) {
+		sessionFactory.getCurrentSession().delete(user);
+		
+	}
+
+	@Override
+	public void saveOrUpdate(User user) {
+		sessionFactory.getCurrentSession().saveOrUpdate(user);
+		
+	}
+
+
+	@Override
+	public List<User> getAll() {
+		return sessionFactory.getCurrentSession().createCriteria(User.class).list();
+	}
+
+	@Override
+	public List<Client> getAllCustomers() {
+		return sessionFactory.getCurrentSession().createCriteria(Client.class).list();
+	}
+
+	@Override
+	public List<Snack> getAllSnack() {
+		// TODO Auto-generated method stub
+		return sessionFactory.getCurrentSession().createCriteria(Snack.class).list();
 	}
 
 

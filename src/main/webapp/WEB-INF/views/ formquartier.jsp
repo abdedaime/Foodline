@@ -77,13 +77,13 @@
 								
                            <tr>
 		                      <th>id</th>
-			                  <th>ville ,quartier</th>
+			                  <th>quartier,ville </th>
 			                    <th>action</th>
 		                    </tr>
 						<c:forEach items="${quartiers}" var="quartier">
                                	<tr>
 									<td>${quartier.id}</td>
-									<td>${quartier.ville.ville} ${quartier.name}</td>
+									<td> ${quartier.name} ${quartier.ville.ville}</td>
 									<td><a href='delete-quartier/${quartier.id}' class="btn btn-danger">supprimer</a> </td>
 								</tr>
 						</c:forEach>

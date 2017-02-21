@@ -44,7 +44,7 @@ public class LoginContorller extends AbstractController {
 	public String login() {
 	
 
-		return "login1";
+		return "login";
 
 	}
 

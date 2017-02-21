@@ -2,7 +2,10 @@ package net.te6.foodline.dao;
 
 import java.util.List;
 
+import javax.persistence.PreRemove;
+
 import net.te6.foodline.models.Quartier;
+import net.te6.foodline.models.Snack;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -27,6 +30,37 @@ public class QuartierDao implements IquartierDao {
 		query.setParameter("id", idVille);
 		return query.list();
 
+	}
+
+	@Override
+	public void save(Quartier quartier) {
+		sessionFactory.getCurrentSession().save(quartier);
+	}
+
+	@Override
+	public void delete(Quartier quartier) {
+		final Session session = sessionFactory.getCurrentSession();
+		session.delete(quartier);
+		
+		
+	}
+
+	@Override
+	public Quartier get(Long id) {
+		
+		return (Quartier) sessionFactory.getCurrentSession().get(Quartier.class, id);
+	}
+
+	@Override
+	public void saveOrUpdate(Quartier quartier) {
+		sessionFactory.getCurrentSession().saveOrUpdate(quartier);
+		
+	}
+
+	@Override
+	public List<Quartier> getAll() {
+		
+		return sessionFactory.getCurrentSession().createCriteria(Quartier.class).list();
 	}
 
 }

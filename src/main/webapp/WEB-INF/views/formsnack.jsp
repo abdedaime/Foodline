@@ -200,10 +200,11 @@
 
 				function ChangeVille() {
 
-					$("#ville")
+					$("form").find("#ville")
 							.change(
 									function() {
-										$('#quartier')
+										
+										$("form").find('#quartier')
 												.find('option')
 												.remove()
 												.end()
@@ -215,7 +216,7 @@
 												+ $(this).val(), {}, function(
 												json, textStatus) {
 											console.log("Success", json);
-											createOption(json,"#quartier");
+											createOption(json,"form #quartier");
 										});
 
 									});

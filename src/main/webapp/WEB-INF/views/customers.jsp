@@ -23,24 +23,27 @@
 						  	<table id="myTable" class="table table-striped">
 											<tr>
 												<th><spring:message code='client.label.id' />  </th>
-												<th> <spring:message code='snack.label.name' /></th>
-												<th><spring:message code='client.label.firstnam' /> <spring:message code='client.label.lastName' /></th>
+												<th>Nom Complet</th>
+												<th>Email</th>
 												<th><spring:message code='client.label.phone' /></th>
-												<th><spring:message code='client.label.avatar' /></th>
 												<th><spring:message code='client.label.action' /></th>
 												
 											</tr>
 											<c:forEach items="${clients}" var="client">
                                                    <tr>
 													<td>${client.id}</td>
+											         <td><img width="80px" height="80px"
+														src="${pageContext.request.contextPath}/images/avatar/${client.id}.png" /> ${client.firstName} ${client.lastName} </td>
 													<td>${client.login}</td>
-				                                    <td>${client.firstName} ${client.lastName}</td>
 				                                    <td>${client.phone}</td>
-				                                    <td><img width="50px" height="50px"
-														src="${pageContext.request.contextPath}/images/avatar/${client.id}.png" />
+													<td> 
+													<c:if test="${client.enabled}">
+														<input data-id="${client.id}"  type="checkbox" checked   class="js-switch" data-color="#6164c1"/> 
+													</c:if>
+													<c:if test="${!client.enabled}">
+														<input data-id="${client.id}"  type="checkbox"     class="js-switch" data-color="#6164c1"/> 
+													</c:if>
 													</td>
-													<td> <input data-id="${client.id}"  type="checkbox" checked="${client.enabled}"     class="js-switch" data-color="#6164c1"/> </td>
-													   
 												</tr>
 
 
@@ -88,7 +91,7 @@
     	       $.ajax({
 					type : "POST",
 					contentType : "application/json",
-					url : "chnage-status/"+id+"/"+status,
+					url : "change-status/"+id+"/"+status,
 					dataType : 'json',
 					success : function(data) {
 						console.log("SUCCESS: ", data);

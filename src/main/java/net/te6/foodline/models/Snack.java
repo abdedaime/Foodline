@@ -1,8 +1,8 @@
 package net.te6.foodline.models;
 
-import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
@@ -15,7 +15,8 @@ public class Snack extends User {
 	private String name;
 	private String phone;
 	private long joinDate;
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
+	@JoinColumn(nullable=true)
 	private Quartier quartier;
 
 	private Double lat;

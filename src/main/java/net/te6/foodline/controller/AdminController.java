@@ -152,14 +152,16 @@ public class AdminController extends AbstractController {
 
 	@RequestMapping(value = "editSnack/{idSnack}", method = RequestMethod.POST)
 	public ResponseEntity<?> getSnackByid(@PathVariable long idSnack) {
-
+		 log.info("--idSnack--"+idSnack);
+		 log.info(userService.getUserById(idSnack).toString());
 		return new ResponseEntity<User>(userService.getUserById(idSnack),
 				HttpStatus.ACCEPTED);
 	}
 
 	@RequestMapping(value = "quartierByVille/{idVille}", method = RequestMethod.GET)
 	public ResponseEntity<?> quartierByVille(@PathVariable long idVille) {
-
+		 log.info("--idville--"+idVille);
+         log.info("--quartier --"+quartService.getQuartierByVille(idVille).toString());
 		return new ResponseEntity<List<Quartier>>(
 				quartService.getQuartierByVille(idVille), HttpStatus.ACCEPTED);
 	}
@@ -171,11 +173,13 @@ public class AdminController extends AbstractController {
 		return "redirect:/admin/snacks?successdelete=1";
 	}
 
-	@RequestMapping(value = "chnage-status/{idCustomer}/{status}", method = RequestMethod.POST)
+	@RequestMapping(value = "change-status/{idCustomer}/{status}", method = RequestMethod.POST)
 	public ResponseEntity<?> ChangeStatusCustomer(
-			@PathVariable("idCustomer") long id, boolean status) {
+			@PathVariable("idCustomer") long id, @PathVariable("status") boolean status) {
+		log.info(status);
 		User us = userService.getUserById(id);
 		us.setEnabled(status);
+		log.info(us.toString());
 		userService.saveOrUpdate(us);
 		return new ResponseEntity<User>(us, HttpStatus.ACCEPTED);
 	}

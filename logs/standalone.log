@@ -6756,3 +6756,280 @@ Caused by: java.lang.IllegalArgumentException: A ServletContext is required to c
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
 	... 43 more
+INFO  [21.02.17 15:59:36] AbstractTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] [thread: main]
+INFO  [21.02.17 15:59:36] AbstractTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2a5ca609, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@20e2cbe0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68be2bc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28feb3fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@675d3402, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@51565ec2] [thread: main]
+INFO  [21.02.17 15:59:37] AbstractApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@5f2108b5: startup date [Tue Feb 21 15:59:37 WET 2017]; root of context hierarchy [thread: main]
+INFO  [21.02.17 15:59:39] AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring [thread: main]
+INFO  [21.02.17 15:59:40] DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver [thread: main]
+INFO  [21.02.17 15:59:41] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {4.0.5.Final} [thread: main]
+INFO  [21.02.17 15:59:41] Version - HHH000412: Hibernate Core {4.3.11.Final} [thread: main]
+INFO  [21.02.17 15:59:41] Environment - HHH000206: hibernate.properties not found [thread: main]
+INFO  [21.02.17 15:59:41] Environment - HHH000021: Bytecode provider name : javassist [thread: main]
+INFO  [21.02.17 15:59:43] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect [thread: main]
+WARN  [21.02.17 15:59:44] AnnotationBinder - HHH000133: Discriminator column has to be defined in the root entity, it will be ignored in subclass: net.te6.foodline.models.Admin [thread: main]
+INFO  [21.02.17 15:59:44] TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) [thread: main]
+INFO  [21.02.17 15:59:44] ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory [thread: main]
+INFO  [21.02.17 15:59:44] Version - HV000001: Hibernate Validator 5.4.0.Final [thread: main]
+INFO  [21.02.17 15:59:47] SchemaUpdate - HHH000228: Running hbm2ddl schema update [thread: main]
+INFO  [21.02.17 15:59:47] SchemaUpdate - HHH000102: Fetching database metadata [thread: main]
+INFO  [21.02.17 15:59:47] SchemaUpdate - HHH000396: Updating schema [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000261: Table found: foodline.categorie [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000037: Columns: [name, id, type] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000108: Foreign keys: [] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000126: Indexes: [primary] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000261: Table found: foodline.command [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000037: Columns: [datecommand, datepreparation, id, client_id] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000108: Foreign keys: [fk_1qs8dkfjqhb3katfubr9enmvf] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000126: Indexes: [fk_1qs8dkfjqhb3katfubr9enmvf, primary] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000261: Table found: foodline.food [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000037: Columns: [snack_id, price, name, id, categorie_id] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000108: Foreign keys: [fk_dsy99kw1hkf7ix1kba7xfyl81, fk_e8tlm5ul3dsn1ey75yhq2yyvs] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000126: Indexes: [fk_dsy99kw1hkf7ix1kba7xfyl81, fk_e8tlm5ul3dsn1ey75yhq2yyvs, primary] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000261: Table found: foodline.quartier [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000037: Columns: [name, id, ville_id] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000108: Foreign keys: [fk_mxem7bqpakap6f63e04eqw76b] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000126: Indexes: [fk_mxem7bqpakap6f63e04eqw76b, primary] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000261: Table found: foodline.recherche [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000037: Columns: [recherche_id, lng, quartier_id, id, rayon, lat] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000108: Foreign keys: [fk_kry5eqd2wfvrk7nq2gpovr27n, fk_o3m4aj31h0hkssxykejr81sup] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000126: Indexes: [fk_kry5eqd2wfvrk7nq2gpovr27n, fk_o3m4aj31h0hkssxykejr81sup, primary] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000261: Table found: foodline.role [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000037: Columns: [name] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000108: Foreign keys: [] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000126: Indexes: [primary] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000261: Table found: foodline.user [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000037: Columns: [firstname, joindate, lng, type, login, enabled, lastname, role_name, password, typeauth, phone, name, quartier_id, id, lat] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000108: Foreign keys: [fk_ma2kdjidbgvfa0ni3gpj49csm, fk_s1nopfifhpugsr6o2oelstco9] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000126: Indexes: [fk_ma2kdjidbgvfa0ni3gpj49csm, fk_s1nopfifhpugsr6o2oelstco9, primary] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000261: Table found: foodline.ville [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000037: Columns: [ville, id] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000108: Foreign keys: [] [thread: main]
+INFO  [21.02.17 15:59:47] TableMetadata - HHH000126: Indexes: [primary] [thread: main]
+INFO  [21.02.17 15:59:47] SchemaUpdate - HHH000232: Schema update complete [thread: main]
+WARN  [21.02.17 15:59:47] AbstractApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private net.te6.foodline.mailing.IapplicationMailer net.te6.foodline.controller.AdminController.applicationMailer; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.mail.javamail.JavaMailSender net.te6.foodline.mailing.ApplicationMailer.mailSender; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.springframework.mail.javamail.JavaMailSender] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} [thread: main]
+ERROR [21.02.17 15:59:47] TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68be2bc2] to prepare test instance [net.te6.foodline.test.TestService@9fecdf1] [thread: main]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private net.te6.foodline.mailing.IapplicationMailer net.te6.foodline.controller.AdminController.applicationMailer; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.mail.javamail.JavaMailSender net.te6.foodline.mailing.ApplicationMailer.mailSender; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.springframework.mail.javamail.JavaMailSender] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private net.te6.foodline.mailing.IapplicationMailer net.te6.foodline.controller.AdminController.applicationMailer; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.mail.javamail.JavaMailSender net.te6.foodline.mailing.ApplicationMailer.mailSender; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.springframework.mail.javamail.JavaMailSender] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 41 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.mail.javamail.JavaMailSender net.te6.foodline.mailing.ApplicationMailer.mailSender; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.springframework.mail.javamail.JavaMailSender] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 43 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.mail.javamail.JavaMailSender net.te6.foodline.mailing.ApplicationMailer.mailSender; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.springframework.mail.javamail.JavaMailSender] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 54 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [org.springframework.mail.javamail.JavaMailSender] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 56 more
+INFO  [21.02.17 16:00:45] AbstractTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] [thread: main]
+INFO  [21.02.17 16:00:45] AbstractTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@20e2cbe0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@68be2bc2, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@28feb3fa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@675d3402, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51565ec2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@482f8f11] [thread: main]
+INFO  [21.02.17 16:00:46] AbstractApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@31a5c39e: startup date [Tue Feb 21 16:00:46 WET 2017]; root of context hierarchy [thread: main]
+INFO  [21.02.17 16:00:48] AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring [thread: main]
+INFO  [21.02.17 16:00:48] MailConfig - ------laoded configuration smtp----- [thread: main]
+INFO  [21.02.17 16:00:48] DriverManagerDataSource - Loaded JDBC driver: com.mysql.jdbc.Driver [thread: main]
+INFO  [21.02.17 16:00:49] JavaReflectionManager - HCANN000001: Hibernate Commons Annotations {4.0.5.Final} [thread: main]
+INFO  [21.02.17 16:00:49] Version - HHH000412: Hibernate Core {4.3.11.Final} [thread: main]
+INFO  [21.02.17 16:00:49] Environment - HHH000206: hibernate.properties not found [thread: main]
+INFO  [21.02.17 16:00:49] Environment - HHH000021: Bytecode provider name : javassist [thread: main]
+INFO  [21.02.17 16:00:49] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect [thread: main]
+WARN  [21.02.17 16:00:50] AnnotationBinder - HHH000133: Discriminator column has to be defined in the root entity, it will be ignored in subclass: net.te6.foodline.models.Admin [thread: main]
+INFO  [21.02.17 16:00:50] TransactionFactoryInitiator - HHH000399: Using default transaction strategy (direct JDBC transactions) [thread: main]
+INFO  [21.02.17 16:00:50] ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory [thread: main]
+INFO  [21.02.17 16:00:50] Version - HV000001: Hibernate Validator 5.4.0.Final [thread: main]
+INFO  [21.02.17 16:00:51] SchemaUpdate - HHH000228: Running hbm2ddl schema update [thread: main]
+INFO  [21.02.17 16:00:51] SchemaUpdate - HHH000102: Fetching database metadata [thread: main]
+INFO  [21.02.17 16:00:51] SchemaUpdate - HHH000396: Updating schema [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000261: Table found: foodline.categorie [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000037: Columns: [name, id, type] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000108: Foreign keys: [] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000126: Indexes: [primary] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000261: Table found: foodline.command [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000037: Columns: [datecommand, datepreparation, id, client_id] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000108: Foreign keys: [fk_1qs8dkfjqhb3katfubr9enmvf] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000126: Indexes: [fk_1qs8dkfjqhb3katfubr9enmvf, primary] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000261: Table found: foodline.food [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000037: Columns: [snack_id, price, name, id, categorie_id] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000108: Foreign keys: [fk_dsy99kw1hkf7ix1kba7xfyl81, fk_e8tlm5ul3dsn1ey75yhq2yyvs] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000126: Indexes: [fk_dsy99kw1hkf7ix1kba7xfyl81, fk_e8tlm5ul3dsn1ey75yhq2yyvs, primary] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000261: Table found: foodline.quartier [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000037: Columns: [name, id, ville_id] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000108: Foreign keys: [fk_mxem7bqpakap6f63e04eqw76b] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000126: Indexes: [fk_mxem7bqpakap6f63e04eqw76b, primary] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000261: Table found: foodline.recherche [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000037: Columns: [recherche_id, lng, quartier_id, id, rayon, lat] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000108: Foreign keys: [fk_kry5eqd2wfvrk7nq2gpovr27n, fk_o3m4aj31h0hkssxykejr81sup] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000126: Indexes: [fk_kry5eqd2wfvrk7nq2gpovr27n, fk_o3m4aj31h0hkssxykejr81sup, primary] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000261: Table found: foodline.role [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000037: Columns: [name] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000108: Foreign keys: [] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000126: Indexes: [primary] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000261: Table found: foodline.user [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000037: Columns: [firstname, joindate, lng, type, login, enabled, lastname, role_name, password, typeauth, phone, name, quartier_id, id, lat] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000108: Foreign keys: [fk_ma2kdjidbgvfa0ni3gpj49csm, fk_s1nopfifhpugsr6o2oelstco9] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000126: Indexes: [fk_ma2kdjidbgvfa0ni3gpj49csm, fk_s1nopfifhpugsr6o2oelstco9, primary] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000261: Table found: foodline.ville [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000037: Columns: [ville, id] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000108: Foreign keys: [] [thread: main]
+INFO  [21.02.17 16:00:51] TableMetadata - HHH000126: Indexes: [primary] [thread: main]
+INFO  [21.02.17 16:00:51] SchemaUpdate - HHH000232: Schema update complete [thread: main]
+INFO  [21.02.17 16:00:52] HibernateTransactionManager - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@f973499] of Hibernate SessionFactory for HibernateTransactionManager [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/quartiers],methods=[GET]}" onto public java.lang.String net.te6.foodline.controller.AdminController.indexQuartiers(org.springframework.ui.Model) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/clients],methods=[GET]}" onto public java.lang.String net.te6.foodline.controller.AdminController.indexCustomers(org.springframework.ui.Model) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/addQuartier],methods=[POST]}" onto public java.lang.String net.te6.foodline.controller.AdminController.addQuartier(net.te6.foodline.models.Quartier) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/snacks],methods=[GET]}" onto public java.lang.String net.te6.foodline.controller.AdminController.indexSnack(org.springframework.ui.Model) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/add-snack],methods=[POST]}" onto public java.lang.String net.te6.foodline.controller.AdminController.addSnack(net.te6.foodline.models.Snack,org.springframework.web.multipart.MultipartFile) throws java.lang.Exception [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/villes],methods=[GET]}" onto public java.lang.String net.te6.foodline.controller.AdminController.indexVille(org.springframework.ui.Model) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/addVille],methods=[POST]}" onto public java.lang.String net.te6.foodline.controller.AdminController.addVille(net.te6.foodline.models.Ville) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/delete-ville/{idVille}],methods=[GET]}" onto public java.lang.String net.te6.foodline.controller.AdminController.deleteVille(long) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/delete-quartier/{idQaurtier}],methods=[GET]}" onto public java.lang.String net.te6.foodline.controller.AdminController.deleteQuartier(long) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/editSnack/{idSnack}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.controller.AdminController.getSnackByid(long) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/quartierByVille/{idVille}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.controller.AdminController.quartierByVille(long) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/delete-snack/{idSnack}],methods=[GET]}" onto public java.lang.String net.te6.foodline.controller.AdminController.deleteSnack(long) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/admin/chnage-status/{idCustomer}/{status}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.controller.AdminController.ChangeStatusCustomer(long,boolean) [thread: main]
+INFO  [21.02.17 16:00:52] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/index]}" onto public java.lang.String net.te6.foodline.controller.LoginContorller.index() [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/login]}" onto public java.lang.String net.te6.foodline.controller.LoginContorller.login() [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/create-account],methods=[POST]}" onto public java.lang.String net.te6.foodline.controller.LoginContorller.addSnack(org.springframework.ui.Model,net.te6.foodline.models.Client,org.springframework.validation.BindingResult,org.springframework.web.multipart.MultipartFile) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/account]}" onto public java.lang.String net.te6.foodline.controller.LoginContorller.accountPage() [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/activate-account/{token}],methods=[GET]}" onto public java.lang.String net.te6.foodline.controller.LoginContorller.activatAccount(java.lang.String) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/food/food-snack/{idSnack}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.FoodController.foodBySnack(long) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/food/add-food],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.FoodController.createFood(net.te6.foodline.models.Food) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/food/add-food1],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.FoodController.creatCommand(net.te6.foodline.models.Command) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/customer/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.RestCustomer.login(net.te6.foodline.models.Client) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/customer/signin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.RestCustomer.signin(net.te6.foodline.models.Client) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/snack/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.RestSnack.login(net.te6.foodline.models.Snack) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/snack/editSnack/{idSnack}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.RestSnack.getSnackByid(long) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/ville/quartier-by-ville/{idVille}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.VilleController.quartierByVille(long) [thread: main]
+INFO  [21.02.17 16:00:53] AbstractHandlerMethodMapping$MappingRegistry - Mapped "{[/ville/villes]}" onto public org.springframework.http.ResponseEntity<?> net.te6.foodline.restController.VilleController.listVilles() [thread: main]
+INFO  [21.02.17 16:00:53] AbstractUrlHandlerMapping - Mapped URL path [/images/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] [thread: main]
+INFO  [21.02.17 16:00:53] AbstractUrlHandlerMapping - Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] [thread: main]
+WARN  [21.02.17 16:00:53] AbstractApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultServletHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'defaultServletHandlerMapping' threw exception; nested exception is java.lang.IllegalArgumentException: A ServletContext is required to configure default servlet handling [thread: main]
+ERROR [21.02.17 16:00:53] TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@28feb3fa] to prepare test instance [net.te6.foodline.test.TestService@58399d82] [thread: main]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultServletHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'defaultServletHandlerMapping' threw exception; nested exception is java.lang.IllegalArgumentException: A ServletContext is required to configure default servlet handling
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'defaultServletHandlerMapping' threw exception; nested exception is java.lang.IllegalArgumentException: A ServletContext is required to configure default servlet handling
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 42 more
+Caused by: java.lang.IllegalArgumentException: A ServletContext is required to configure default servlet handling
+	at org.springframework.util.Assert.notNull(Assert.java:115)
+	at org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer.<init>(DefaultServletHandlerConfigurer.java:53)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.defaultServletHandlerMapping(WebMvcConfigurationSupport.java:451)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration$$EnhancerBySpringCGLIB$$95894852.CGLIB$defaultServletHandlerMapping$29(<generated>)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration$$EnhancerBySpringCGLIB$$95894852$$FastClassBySpringCGLIB$$1e047a66.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration$$EnhancerBySpringCGLIB$$95894852.defaultServletHandlerMapping(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 43 more
