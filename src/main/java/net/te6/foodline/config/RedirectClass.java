@@ -6,11 +6,8 @@ import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import net.te6.foodline.services.IuserService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
@@ -23,8 +20,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class RedirectClass implements AuthenticationSuccessHandler {
-	@Autowired
-	private IuserService userService;
+	
 	public static final String ROLE_CUSTOMER = "Role_client";
 	public static final String ROLE_ADMIN = "Role_admin";
 	public static final String ROLE_SNACK = "Role_snack";

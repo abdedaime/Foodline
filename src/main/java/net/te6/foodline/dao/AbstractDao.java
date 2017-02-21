@@ -6,7 +6,6 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 @SuppressWarnings("unchecked")
 public abstract class AbstractDao<T> {
 	private Class<T> clazz;
@@ -19,29 +18,28 @@ public abstract class AbstractDao<T> {
 	protected SessionFactory sessionFactory;
 
 	public T save(T o) {
-		return (T) sessionFactory.openSession().save(o);
+		return (T) sessionFactory.getCurrentSession().save(o);
 	}
 
 	public void delete(T object) {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		session.delete(object);
-		session.flush();
 
 	}
 
 	public T get(Class<T> type, Long id) {
-		return (T) sessionFactory.openSession().get(type, id);
+		return (T) sessionFactory.getCurrentSession().get(type, id);
 	}
 
 	public void saveOrUpdate(T o) {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		session.saveOrUpdate(o);
 		session.flush();
 
 	}
 
 	public List<T> getAll(Class<T> type) {
-		final Session session = sessionFactory.openSession();
+		final Session session = sessionFactory.getCurrentSession();
 		final Criteria crit = session.createCriteria(type);
 		return crit.list();
 	}

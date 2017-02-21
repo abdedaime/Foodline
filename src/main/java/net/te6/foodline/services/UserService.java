@@ -78,4 +78,5 @@ public class UserService implements IuserService {
 		return daoCustomer.getAll(Client.class);
 	}
 
+	
 }

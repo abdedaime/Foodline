@@ -42,7 +42,7 @@ public class LoginContorller extends AbstractController {
 
 	@RequestMapping(value = "/login")
 	public String login() {
-
+	
 
 		return "login1";
 

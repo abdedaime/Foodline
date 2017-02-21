@@ -1,5 +1,6 @@
 package net.te6.foodline.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -14,7 +15,7 @@ public class Snack extends User {
 	private String name;
 	private String phone;
 	private long joinDate;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	private Quartier quartier;
 
 	private Double lat;
@@ -28,25 +29,17 @@ public class Snack extends User {
 		return lat;
 	}
 
-
-
 	public void setLat(Double lat) {
 		this.lat = lat;
 	}
-
-
 
 	public Double getLng() {
 		return lng;
 	}
 
-
-
 	public void setLng(Double lng) {
 		this.lng = lng;
 	}
-
-
 
 	public Quartier getQuartier() {
 		return quartier;
@@ -82,10 +75,9 @@ public class Snack extends User {
 
 	@Override
 	public String toString() {
-		return  super.toString()+
-				"Snack [name=" + name + ", phone=" + phone + ", joinDate="
-				+ joinDate + ", quartier=" + quartier + ", lat=" + lat
-				+ ", lng=" + lng + "]";
+		return super.toString() + "Snack [name=" + name + ", phone=" + phone
+				+ ", joinDate=" + joinDate + ", quartier=" + quartier
+				+ ", lat=" + lat + ", lng=" + lng + "]";
 	}
 
 }

@@ -5,9 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import net.te6.foodline.config.RedirectClass;
 import net.te6.foodline.mailing.IapplicationMailer;
-import net.te6.foodline.models.Admin;
 import net.te6.foodline.models.Client;
 import net.te6.foodline.models.Quartier;
 import net.te6.foodline.models.Snack;
@@ -48,10 +46,10 @@ public class AdminController extends AbstractController {
 	private IquartierService quartService;
 
 	@ModelAttribute("currentUser")
-	public Admin currentUser(HttpServletRequest request,Authentication auth) {
-		Admin adm=(Admin) userService.getUserByUsermail(auth.getName());
-		log.info(adm.toString());
-		return adm;
+	public User currentUser(HttpServletRequest request,Authentication auth) {
+		User user=  userService.getUserByUsermail(auth.getName());
+		log.info("----current user--------"+user.toString());
+		return user;
 	}
 
 	@ModelAttribute("snack")

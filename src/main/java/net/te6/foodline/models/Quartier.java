@@ -1,10 +1,15 @@
 package net.te6.foodline.models;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  * Created by hicham on 08/02/2017.
@@ -17,6 +22,10 @@ public class Quartier  {
     private String name;
     @ManyToOne
     private Ville ville;
+    @OneToMany(mappedBy="quartier",fetch=FetchType.LAZY,cascade=CascadeType.REMOVE)
+    private List<Snack> snacks;
+   
+  
     public long getId() {
         return id;
     }
@@ -40,8 +49,17 @@ public class Quartier  {
     public void setName(String name) {
         this.name = name;
     }
+    
+   
+    public List<Snack> getSnacks() {
+		return snacks;
+	}
 
-    @Override
+	public void setSnacks(List<Snack> snacks) {
+		this.snacks = snacks;
+	}
+
+	@Override
     public String toString() {
         return "Quartier{" +
                 "id=" + id +
@@ -49,8 +67,10 @@ public class Quartier  {
                 ", ville=" + ville+
                 '}';
     }
+ 
+  
 
-    @Override
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -71,6 +91,6 @@ public class Quartier  {
         return result;
     }
     
-    
+ 
     
 }

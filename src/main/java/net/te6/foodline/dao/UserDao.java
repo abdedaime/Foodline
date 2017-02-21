@@ -9,9 +9,8 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-@Repository
 @Transactional
+@Repository
 public class UserDao implements IuserDao {
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -42,6 +41,9 @@ public class UserDao implements IuserDao {
 		return (User) query.uniqueResult();
 
 	}
+
+
+
 
 
 }

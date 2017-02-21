@@ -5,20 +5,23 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorColumn(name="admin")
 public class Admin  extends User {
-	private String FirstName;
-	private String LastName;
+	private String firstName;
+	private String lastName;
 	public String getFirstName() {
-		return FirstName;
+		return firstName;
 	}
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.firstName = firstName;
 	}
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
+
+	
+	
 	
 	
 

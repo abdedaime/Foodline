@@ -5,7 +5,6 @@ import java.security.NoSuchAlgorithmException;
 
 import javax.mail.internet.MimeMessage;
 
-import net.te6.foodline.controller.AbstractController;
 import net.te6.foodline.models.Snack;
 
 import org.springframework.beans.factory.annotation.Autowired;

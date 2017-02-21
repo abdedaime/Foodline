@@ -19,7 +19,7 @@
 												<tr>
 													<td>${snac.id}</td>
 													<td><img width="50px" height="50px"
-														src="${pageContext.request.contextPath}/images/logo/${snac.id}.png" />${snac.name} </td>
+														src="${pageContext.request.contextPath}/images/logo/${snac.id}.png" />&nbsp; ${snac.name} </td>
 				                                    <td>${snac.login}</td>
 													<td>${snac.quartier.ville.ville} , ${snac.quartier.name}</td>
 													<td>${snac.phone}</td>

@@ -36,7 +36,7 @@
                         	<c:if test="${param.successdelete  eq 1}">
                                <div  class="alert alert-success form-group alert-dismissable">
                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                            <strong>la suppression de la ville a été bien effectuée</strong> 
+                            <strong>la suppression du snack a été bien effectuée</strong> 
                         </div>
                              </c:if>
                              <!-- start form -->
@@ -156,8 +156,8 @@
             </div>
 
 	                       <!-- end form  -->
-
-      					<%@ include file="tables/table-snack.jsp"%>
+	                     <%@ include file="modal-update-snack.jsp"%>
+                        <%@ include file="tables/table-snack.jsp"%>
 
 						<!--row -->
 						<!-- .right-sidebar -->
@@ -215,14 +215,14 @@
 												+ $(this).val(), {}, function(
 												json, textStatus) {
 											console.log("Success", json);
-											createOption(json);
+											createOption(json,"#quartier");
 										});
 
 									});
 
 				}
 
-				function createOption(data) {
+				function createOption(data,id) {
 
 					jQuery
 							.each(
@@ -233,32 +233,36 @@
 										option += value.name;
 										option += "</option>";
 										console.log("Option", option);
-										$("#quartier").append(option);
+										$(id).append(option);
 
 									});
 
 				}
 
 				function displyaData(data) {
-					$('#idsnack').val(data.id);
-					$('#name').val(data.name);
-					$('#lat').val(data.lat);
-					$('#lng').val(data.lng);
-					$('#login').val(data.login);
-					$('#phone').val(data.phone);
-					$("#ville").val(data.quartier.ville.id);
-					editQuartier(data);
-					$('#snackform').modal('show');
+					$('#updateSnack #idsnack').val(data.id);
+					$('#updateSnack #name').val(data.name);
+					$('#updateSnack #lat').val(data.lat);
+					$('#updateSnack #lng').val(data.lng);
+					$('#updateSnack #login').val(data.login);
+					$('#updateSnack #phone').val(data.phone);
+					$("#updateSnack #ville").val(data.quartier.ville.id);
+					editQuartier(data,data.quartier.ville.id);
+					$('#snackUpdateform').modal('show');
 				}
 				
 				
-				function editQuartier(data){
-					var option = "<option  id='quart' ";
-                    option+=" value="+data.quartier.id+">";
-					option += data.quartier.name;
-					option += "</option>";
-					console.log("Option", option);
-					$("#quartier").append(option);
-					$("#quartier").val(data.quartier.id);
+				function editQuartier(data,idVille){
+					$('#updateSnack #quartier')
+					.find('option')
+					.remove()
+					.end()
+					.append('<option selected disabled><spring:message code="snack.label.select.quartier" /></option>');
+
+			$.getJSON('quartierByVille/'+ idVille, {}, function(json, textStatus) {
+				console.log("Success", json);
+				createOption(json,"#updateSnack #quartier");
+				$("#updateSnack #quartier").val(data.quartier.id);
+			});
 				}
 			</script>

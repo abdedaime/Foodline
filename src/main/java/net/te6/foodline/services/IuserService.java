@@ -18,8 +18,7 @@ public interface IuserService {
 	User getUserByUsermail(String userName);
 
 	User getUserById(long id);
-	
-	void deleteUser(long id);
+    void deleteUser(long id);
 	public List<Client> getAllCustomers();
 
 

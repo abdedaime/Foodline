@@ -8,5 +8,7 @@ public interface IuserDao {
 	User getUserByUsermail(String userName);
 
 	User getUserById(long id);
+	
+
 
 }
