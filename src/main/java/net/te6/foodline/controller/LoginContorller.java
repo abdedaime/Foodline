@@ -42,10 +42,7 @@ public class LoginContorller extends AbstractController {
 
 	@RequestMapping(value = "/login")
 	public String login() {
-	
-
-		return "login";
-
+		return "login"; 
 	}
 
 	@RequestMapping(value = "/account")
@@ -76,14 +73,14 @@ public class LoginContorller extends AbstractController {
 		return "redirect:account?success=1";
 	}
 
-	@RequestMapping(value = "activate-account/{token}",method=RequestMethod.GET)
+	@RequestMapping(value = "activate-account/{token}", method = RequestMethod.GET)
 	public String activatAccount(@PathVariable String token) {
 		for (User user : userService.getAll()) {
-			log.info("token-----------------------"+user.toString());
+			log.info("token-----------------------" + user.toString());
 
-			if (clairToMd5(user.getLogin()+user.getId()).equals(token)) {
-               user.setEnabled(true);
-               userService.saveOrUpdate(user);
+			if (clairToMd5(user.getLogin() + user.getId()).equals(token)) {
+				user.setEnabled(true);
+				userService.saveOrUpdate(user);
 			}
 		}
 		return "redirect:/login?activate=1";
